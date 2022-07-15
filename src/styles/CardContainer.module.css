@@ -1,0 +1,24 @@
+.cardContainer {
+  margin: 0 1.5em;
+  /* max-width: fit-content; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1em;
+}
+
+@media screen and (min-width: 620px) {
+  .cardContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 928px) {
+  .cardContainer {
+    max-width: 900px;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,40 @@
+.cardDiv {
+  position: relative;
+  /* --flip-duration: 300ms; */
+}
+
+.card {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.front {
+  composes: card;
+
+  transform: rotateY(90deg);
+  transition: transform var(--flip-duration) linear;
+  transition-delay: var(--flip-duration);
+}
+
+.back {
+  composes: card;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: rotateY(0);
+  transition: transform var(--flip-duration) linear var(--flip-duration);
+}
+
+.flipped {
+  cursor: default;
+}
+
+.flipped.front {
+  transform: rotateY(0deg);
+}
+
+.flipped.back {
+  transform: rotateY(90deg);
+}

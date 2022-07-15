@@ -1,0 +1,29 @@
+.spinnerContainer {
+  width: 100%;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.spinner {
+  font-size: 2rem;
+
+  animation: rotate 2500ms linear infinite, fadeIn 500ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
